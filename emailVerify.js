@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs')
 const app = express();
 const mongoose =  require('mongoose')
 
-mongoose.connect("mongodb+srv://admin:2240Om@cluster0.zvu9olr.mongodb.net/user")
+mongoose.connect("MONGO_URL")
 
 const User = mongoose.model('users', { 
     email: String,
