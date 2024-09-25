@@ -4,10 +4,11 @@ const nodemailer = require('nodemailer')
 require('dotenv').config();
 const port = process.env.PORT || 3000;
 const bcrypt = require('bcryptjs')
+const mongo_url = process.env.MONGO_URL
 const app = express();
 const mongoose =  require('mongoose')
 
-mongoose.connect("MONGO_URL")
+mongoose.connect(mongo_url)
 
 const User = mongoose.model('users', { 
     email: String,
